@@ -1,0 +1,132 @@
+.pie__pagina {
+    width: 100%;
+    background-color: @first-color;
+}
+
+.pie__pagina .grupo__1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 24px;
+    padding: 45px 0px;
+    text-align: center;
+}
+
+.pie__pagina .grupo__1 .caja figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie__pagina .grupo__1 .caja figure img {
+    max-width: 69.7%;
+    height: auto;
+}
+
+.pie__pagina .grupo__1 .caja h2 {
+    color: @white-color;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-family: @second-font;
+}
+
+.pie__pagina .grupo__1 .caja p {
+    color: @white-color;
+    font-size: 17px;
+}
+
+.pie__pagina .grupo__1 .red__social a {
+    font-size: 25px;
+    display: inline-block;
+    text-decoration: none;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    color: @white-color;
+    margin-right: 8px;
+    background-color: @first-color;
+    text-align: center;
+}
+
+.pie__pagina .grupo__1 .red__social a:hover {
+    color: @second-color;
+}
+
+.pie__pagina .grupo__2 {
+    background-color: @second-color;
+    padding: 15px 10px;
+    text-align: center;
+    color: @white-color;
+}
+
+.pie__pagina .grupo__2 small {
+    font-size: 15px;
+}
+
+.nav__list {
+    display: flex;
+    column-gap: 4.5rem;
+}
+
+.nav__link {
+    color: @white-color;
+    font-family: @second-font;
+}
+
+.nav__link:hover {
+    color: @second-color;
+}
+
+.nav {
+    height: calc(@header-height + 2rem);
+    justify-content: space-between;
+}
+
+/*Screens*/
+@media only screen and (max-width: 576px) {
+    .pie__pagina .grupo__1 .red__social a {
+        font-size: 18px;
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        margin-right: 4px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .pie__pagina .grupo__1 {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 16px;
+        padding: 30px 0px;
+    }
+
+    .pie__pagina .grupo__1 .caja h2 {
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+
+    .pie__pagina .grupo__1 .red__social a {
+        font-size: 20px;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        margin-right: 6px;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .nav__menu {
+        background: linear-gradient(180deg, @first-color 0%);
+        border-radius: 56px 56px 0 0;
+    }
+}
+
+@media screen and (min-width: 1152px) {
+    .container {
+        margin-inline: auto;
+    }
+}
