@@ -8,6 +8,7 @@ import getPageContext from './data';
 
 export default defineConfig(
     {
+        base: '/restaurante/',
         appType: "mpa",
         build: {
             rollupOptions: {
