@@ -1,0 +1,28 @@
+{{#each menuOptions2}}
+<div class="grupo__1">
+    <div class="caja">
+        <figure>
+            <a href="{{furl}}">
+                <img src="{{fimagen}}" alt="Logo">
+            </a>
+        </figure>
+    </div>
+    <div class="caja">
+        <h2>{{ft}}</h2>
+        <p>{{fp1}}</p>
+        <p>{{fp2}}</p>
+        <p>{{fp3}}</p>
+    </div>
+    <div class="caja">
+        <h2>{{ftredes}}</h2>
+        <div class="red__social">
+            <a href="{{whalink}}" class="fa fa-whatsapp" target="_blank"></a>
+            <a href="{{falink}}" class="fa fa-facebook" target="_blank"></a>
+            <a href="{{instalink}}" class="fa fa-instagram" target="_blank"></a>
+        </div>
+    </div>
+</div>
+<div class="grupo__2">
+    <small>&copy;{{ano}}<b>{{nres}}</b>{{tldr}}</small>
+</div>
+{{/each}}

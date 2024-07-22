@@ -1,0 +1,27 @@
+<main>
+    <section class="hero">
+        <div class="boxmodel">
+            <img src="{{menuOptions3.[0].hero}}" alt="Foto del candidato" />
+        </div>
+    </section>
+</main>
+
+<h2>{{menuOptions3.[0].nuestromenu}}</h2>
+
+<mencho class="dog">
+    {{#each menuOptions3}}
+    <div class="card">
+        <div class="face front">
+            <img src="{{imagenf}}" alt="Foto del candidato" />
+            <h3>{{titulof}}</h3>
+        </div>
+        <div class="face back">
+            <h3>{{titulob}}</h3>
+            <p>{{descripcion}}</p>
+            <div class="lin">
+                <a href="{{link}}">{{ordenaqui}}</a>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</mencho>

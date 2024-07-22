@@ -1,0 +1,29 @@
+<div class="carde-container">
+    <div class="carde-wrap">
+        {{#each nosotro}}
+        <article class="carde">
+            <header class="header-carde">
+                <img src="{{lugarT}}" alt="">
+            </header>
+            <footer class="footer-carde">
+                <div class="categoria-carde">
+                    <span>{{rol}}</span>
+                </div>
+                <div class="texto-carde">
+                    <h3>{{hacer}}</h3>
+                    <p>{{descrip}}</p>
+                </div>
+                <div class="perfil-carde">
+                    <div class="img-perfil-carde">
+                        <img src="{{imgpersona}}" alt="">
+                    </div>
+                    <div class="text-perfil-carde">
+                        <span>{{nombre}}</span>
+                        <span>{{jobwith}}</span>
+                    </div>
+                </div>
+            </footer>
+        </article>
+        {{/each}}
+    </div>
+</div>
