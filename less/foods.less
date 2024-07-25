@@ -5,13 +5,12 @@
     width: 100%;
     height: 100%;
     z-index: -1;
-}
 
-
-.background img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
 }
 
 .pricing-panel {
@@ -20,96 +19,101 @@
     grid-gap: 20px;
     margin: 0;
     padding: 0;
+
+    .carda {
+        display: inline-block;
+        background-color: #fff;
+        max-width: 100%;
+        max-height: 420px;
+        overflow: hidden;
+        margin: 1rem;
+        padding: 1rem;
+        border-radius: 5px;
+        outline: 2px solid #c5c5c5;
+        box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.3);
+
+        img {
+            height: 220px;
+            width: 100%;
+            border-radius: 5px;
+            outline: 1.5px solid #dfdfdf;
+        }
+
+        h3 {
+            font-weight: 600;
+            text-align: center;
+            color: red;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-weight: 600;
+        }
+
+        .container-details {
+            margin-left: 60%;
+
+            button {
+                margin-top: 4px;
+                border-width: 0px;
+                height: 35px;
+                width: 100px;
+                background-color: hsl(12, 76%, 41%);
+                color: #fff;
+                border-radius: 8px;
+                font-weight: 600;
+                outline: 3px solid #7d0101;
+                margin-bottom: 8px;
+                cursor: pointer;
+                transition: background-color 1s;
+            }
+        }
+    }
 }
 
-.pricing-panel .carda {
-    display: inline-block;
-    background-color: #fff;
-    max-width: 100%;
-    max-height: 420px;
-    overflow: hidden;
-    margin: 1rem;
-    padding: 1rem;
-    border-radius: 5px;
-    outline: 2px solid #c5c5c5;
-    box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.3);
-}
-
-.pricing-panel .carda img {
-    height: 220px;
-    width: 100%;
-    border-radius: 5px;
-    outline: 1.5px solid #dfdfdf;
-}
-
-.pricing-panel .carda h3 {
-    font-weight: 600;
-    text-align: center;
-    color: red;
-    margin-bottom: 10px;
-}
-
-.pricing-panel .carda p {
-    font-weight: 600;
-}
-
-.pricing-panel .carda .container-details {
-    margin-left: 60%;
-}
-
-.pricing-panel .carda .container-details button {
-    margin-top: 4px;
-    border-width: 0px;
-    height: 35px;
-    width: 100px;
-    background-color: hsl(12, 76%, 41%);
-    color: #fff;
-    border-radius: 8px;
-    font-weight: 600;
-    outline: 3px solid #7d0101;
-    margin-bottom: 8px;
-    cursor: pointer;
-    transition: background-color 1s;
-}
 
 #btn_order:hover {
     background-color: rgb(255, 72, 72);
 }
 
-.pricing-panel .carda #extra {
-    margin-top: 10px;
-    padding-top: 10px;
-    font-size: small;
-    font-weight: 300;
-    color: red;
-}
+.pricing-panel {
+    .carda {
+        #extra {
+            margin-top: 10px;
+            padding-top: 10px;
+            font-size: small;
+            font-weight: 300;
+            color: red;
+        }
 
-.pricing-panel .carda #extra-text {
-    margin-top: 10px;
-    padding-top: 10px;
-    font-size: small;
-    font-weight: 300;
+        #extra-text {
+            margin-top: 10px;
+            padding-top: 10px;
+            font-size: small;
+            font-weight: 300;
+        }
+    }
 }
 
 #contenedor-botones {
     display: inline-flex;
     align-items: center;
     border-radius: 2px;
-}
 
-#contenedor-botones button {
-    background-color: #5c544c;
-    border: none;
-    outline: 2px solid #312b24;
-    text-align: center;
-    height: 25px;
-    width: 25px;
-    border-radius: 15px;
-    margin: 5px 8px;
-    color: #fff;
-    font-weight: 400;
-    -webkit-text-stroke: 2px #fff;
-    cursor: pointer;
+    button {
+        background-color: #5c544c;
+        border: none;
+        outline: 2px solid #312b24;
+        text-align: center;
+        height: 25px;
+        width: 25px;
+        border-radius: 15px;
+        margin: 5px 8px;
+        color: #fff;
+        font-weight: 400;
+        -webkit-text-stroke: 2px #fff;
+        cursor: pointer;
+    }
 }
 
 .price-selector {
@@ -126,8 +130,8 @@
     font-family: "Saira Condensed", sans-serif;
     font-weight: 600;
     font-style: normal;
-}
 
-.price-selector.selected {
-    background-color: #d04f2e;
+    .selected {
+        background-color: #d04f2e;
+    }
 }

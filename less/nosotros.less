@@ -1,11 +1,13 @@
-.texto-carde p {
-    border-left: 5px solid #0c94e8;
-    padding-left: 15px;
-    font-size: 18px;
-}
+.texto-carde {
+    p {
+        border-left: 5px solid #0c94e8;
+        padding-left: 15px;
+        font-size: 18px;
+    }
 
-.texto-carde h3 {
-    padding-top: .5em;
+    h3 {
+        padding-top: .5em;
+    }
 }
 
 .carde-container {
@@ -24,11 +26,11 @@ article.carde {
     display: inline-block;
     vertical-align: top;
     white-space: normal;
-}
 
-article.carde:hover {
-    transform: translateY(-10px);
-    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    }
 }
 
 .header-carde img {
@@ -42,13 +44,13 @@ article.carde:hover {
 .categoria-carde {
     margin-top: 1em;
     margin-left: -.1em;
-}
 
-.categoria-carde span {
-    background: #25c4d8;
-    color: #fff;
-    padding: .2em .5em;
-    border-radius: 4px;
+    span {
+        background: #25c4d8;
+        color: #fff;
+        padding: .2em .5em;
+        border-radius: 4px;
+    }
 }
 
 .carde footer {
@@ -62,22 +64,22 @@ article.carde:hover {
 
 .img-perfil-carde {
     display: flex;
-}
 
-.img-perfil-carde img {
-    width: 50px;
-    height: 50px;
-    margin: 1em 1em 1em 0;
-    border-radius: 50%;
+    img {
+        width: 50px;
+        height: 50px;
+        margin: 1em 1em 1em 0;
+        border-radius: 50%;
+    }
 }
 
 .text-perfil-carde {
     display: flex;
     flex-flow: column;
-}
 
-.text-perfil-carde span:nth-child(2) {
-    color: grey;
+    span:nth-child(2) {
+        color: grey;
+    }
 }
 
 .carde-wrap {
