@@ -14,7 +14,14 @@
             </span>
         </p>
         <p>{{precioL}}
+            {{#if price}}
             <span class="price-items">{{price}}</span>
+            {{/if}}
+            {{#if priceButtons}}
+            {{#each priceButtons}}
+            <button class="price-selector">{{this}}</button>
+            {{/each}}
+        {{/if}}
         <div class="container-details">
             <button type="submit" id="btn_order">{{ordenar}}</button>
         </div>
