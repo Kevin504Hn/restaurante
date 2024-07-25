@@ -9,7 +9,7 @@ const bebidas = {
             contador: "0",
             sumar: "+",
             precioL: "Precio: L.",
-            price: "32",
+            priceButtons: [18, 27,32],
             ordenar: "Ordenar",
             advertencia: "* Las imagenes pueden diferir del producto final.",
         },
