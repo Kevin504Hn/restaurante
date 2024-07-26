@@ -25,7 +25,7 @@ export default defineConfig(
                             resolve(__dirname, file)
                         ])
                     ),
-                    'food': resolve(__dirname, './foods.js') 
+                    'foods': resolve(__dirname, './foods.js') 
                 },
                 output: {
                     entryFileNames: '[name].js', 
