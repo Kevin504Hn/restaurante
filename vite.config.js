@@ -12,22 +12,21 @@ export default defineConfig(
         appType: "mpa",
         build: {
             rollupOptions: {
-                input: Object.fromEntries(
-                    [
-                        ...glob.sync('./!(dist)/*.html').map(
-                            file=> [
-                                file.slice(0, file.length - path.extname(file).length),
-                                resolve(__dirname, file)
-                            ]
-                        ),
-                        ...glob.sync('./*.html').map(
-                            file=> [
-                                file.slice(0, file.length - path.extname(file).length),
-                                resolve(__dirname, file)
-                            ]
-                        )
-                    ]
-                )
+                input: {
+                    ...Object.fromEntries(
+                        glob.sync('./!(dist)/*.html').map(file => [
+                            file.slice(0, file.length - path.extname(file).length),
+                            resolve(__dirname, file)
+                        ])
+                    ),
+                    ...Object.fromEntries(
+                        glob.sync('./*.html').map(file => [
+                            file.slice(0, file.length - path.extname(file).length),
+                            resolve(__dirname, file)
+                        ])
+                    ),
+                    'food': resolve(__dirname, './foods.js') // Añadimos explícitamente el archivo food.js
+                }
             }
         },
         plugins: [
