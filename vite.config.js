@@ -25,14 +25,17 @@ export default defineConfig(
                             resolve(__dirname, file)
                         ])
                     ),
-                    'food': resolve(__dirname, './foods.js') // Añadimos explícitamente el archivo food.js
+                    'food': resolve(__dirname, './foods.js') 
+                },
+                output: {
+                    entryFileNames: '[name].js', 
                 }
             }
         },
         plugins: [
             handlebars({
                 partialDirectory: resolve(__dirname, 'parciales'),
-                context: (pagePath)=>{
+                context: (pagePath) => {
                     console.log(pagePath);
                     const contextVariable = getPageContext(pagePath);
                     console.log(contextVariable);
