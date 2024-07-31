@@ -3,26 +3,59 @@
 
 <head>
     <title>{{title}}</title>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/jpeg" href="img/logopage.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="less/estilos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 
-<header class="header" id="header">
-    <div class="header__border"></div>
-    <nav class="nav container">
-        <a href="{{menuOptions.[0].url}}" class="nav__logo">
-            <img src="{{menuOptions.[0].imagen}}" alt="Logo">
-            {{title}}
-        </a>
-        <div class="nav__menu">
-            <ul class="nav__list">
-                {{#each menuOptions}}
-                <li class="nav__item">
-                    <a href="{{url}}" class="nav__link {{#if active}}active{{/if}}">
-                        <i class="{{icono}}"></i>
-                        <span>{{label}}</span>
-                    </a>
-                </li>
-                {{/each}}
-            </ul>
-        </div>
-    </nav>
-</header>
+<body>
+    <header class="header" id="header">
+        <div class="header__border"></div>
+        <nav class="nav container">
+            <a href="{{menuOptions.[0].url}}" class="nav__logo">
+                <img src="{{menuOptions.[0].imagen}}" alt="Logo">
+                {{title}}
+            </a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    {{#each menuOptions}}
+                    <li class="nav__item">
+                        <a href="{{url}}" class="nav__link {{#if active}}active{{/if}}">
+                            <i class="{{icono}}"></i>
+                            <span>{{label}}</span>
+                        </a>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-line"></i>
+            </div>
+        </nav>
+    </header>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navMenu = document.getElementById('nav-menu');
+            const navToggle = document.getElementById('nav-toggle');
+
+            if (navToggle && navMenu) {
+                navToggle.addEventListener('click', () => {
+                    navMenu.classList.toggle('show-menu');
+                });
+
+                document.addEventListener('click', function (event) {
+                    if (!navMenu.contains(event.target) && !navToggle.contains(event.target)) {
+                        navMenu.classList.remove('show-menu');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
