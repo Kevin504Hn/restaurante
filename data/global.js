@@ -9,10 +9,14 @@ const getMenuWithActivePath = (path) => {
     return [
         {
             imagen: "img/Hong Kong Logo 612x612.jpg",
-           
-        
-             url: 'index.html',
+            url: 'index.html',
             page: 'index',
+        },
+        {
+            icono: "ri-ancient-pavilion-line",
+            label: 'Inicio',
+            url: 'index.html',
+            page: 'inicio',
         },
         {
             icono: "ri-store-line",
